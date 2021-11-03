@@ -7,7 +7,7 @@ export default function fetchMovies(option, query, page) {
   switch (option) {
     case "trending":
       return axios
-        .get(`${BASE_URL}/3/trending/all/day?api_key=${KEY}`)
+        .get(`${BASE_URL}/3/trending/movie/week?api_key=${KEY}`)
         .then((r) => r.data.results);
 
     case "search":
