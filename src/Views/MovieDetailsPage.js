@@ -37,6 +37,7 @@ export default function MoviesDetailsPage() {
           height={100}
           width={100}
           timeout={5000}
+          className="centered"
         />
       )}
       {status === "resolved" && (
@@ -91,6 +92,7 @@ export default function MoviesDetailsPage() {
                 color="#00BFFF"
                 height={360}
                 width={360}
+                className="centered"
               />
             }
           >

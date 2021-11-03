@@ -23,7 +23,13 @@ function App() {
       <Header />
       <Suspense
         fallback={
-          <Loader type="ThreeDots" color="#00BFFF" height={360} width={360} />
+          <Loader
+            type="ThreeDots"
+            color="#00BFFF"
+            height={360}
+            width={360}
+            className="centered"
+          />
         }
       >
         <Switch>

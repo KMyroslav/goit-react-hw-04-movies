@@ -10,6 +10,7 @@ export default function HomePage() {
   useEffect(() => {
     setStatus("pending");
     fetchMovies("trending").then((r) => {
+      console.log(r);
       setTrendingMovies(r);
       setStatus(r.length !== 0 ? "resolved" : "rejected");
     });
@@ -24,6 +25,7 @@ export default function HomePage() {
           height={100}
           width={100}
           timeout={5000}
+          className="centered"
         />
       )}
       {status === "resolved" && (

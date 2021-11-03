@@ -110,3 +110,10 @@ body {
   margin-bottom: 10px;
   width: 200px;
 }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

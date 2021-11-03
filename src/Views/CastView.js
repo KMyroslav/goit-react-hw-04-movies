@@ -26,6 +26,7 @@ export default function Cast() {
           height={100}
           width={100}
           timeout={5000}
+          className="centered"
         />
       )}
       {status === "resolved" && (
