@@ -1,7 +1,12 @@
 import { lazy, Suspense } from "react";
 import Loader from "react-loader-spinner";
 import { useEffect, useState } from "react";
-import { useParams, NavLink, useRouteMatch } from "react-router-dom";
+import {
+  useParams,
+  NavLink,
+  useRouteMatch,
+  useHistory,
+} from "react-router-dom";
 import fetchMovies from "../Services/fetchMovies";
 // import CastView from "./CastView";
 // import ReviewView from "./ReviewView";
@@ -18,6 +23,7 @@ export default function MoviesDetailsPage() {
   const [status, setStatus] = useState("idle");
   const { movieId } = useParams();
   const { url } = useRouteMatch();
+  const { goBack } = useHistory();
 
   useEffect(() => {
     setStatus("pending");
@@ -42,6 +48,9 @@ export default function MoviesDetailsPage() {
       )}
       {status === "resolved" && (
         <div>
+          <button type="button" onClick={goBack}>
+            Go Back
+          </button>
           <div className="details-wrapper">
             <img
               className="movie-poster"
